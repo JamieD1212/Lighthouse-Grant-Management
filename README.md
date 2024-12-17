@@ -1,5 +1,9 @@
 # Lighthouse-Grant-Management
 
+## About the Project
+This grant management system was built as part of a computer science senior project at Hamilton College.
+Authors: Samuel Anaevune, Abigail Bernardeau, Jamie Duncan, Ingrid Mast and Andreas Matejka
+
 ## Getting started with Lighthouse Grant Management
 This is a Grant Management System application designed to store grants and send reminder notification emails about upcoming deadlines.
 
