@@ -1,0 +1,51 @@
+-- Header: database.sql
+-- Authors: Samuel Anaevune, Abigail Bernardeau, Jamie Duncan, Ingrid Mast and Andreas Matejka
+-- Created: 12/09/2024
+-- Description: This file holds the sqlite code which instantiates the database for our application. The code is currently commented out to prevent new databases from being created.
+-- Copyright (c) <2024> <Samuel Anaevune, Abigail Bernardeau, Jamie Duncan, Ingrid Mast and Andreas Matejka>
+-- Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-- CREATE TABLE all_grants (
+--     id INTEGER PRIMARY KEY,
+--     foundation_name TEXT NOT NULL, 
+--     grant_name TEXT NOT NULL,
+--     grant_status TEXT NOT NULL,
+--     requested_amount INTEGER,
+--     expected_amount INTEGER,
+--     amount_awarded INTEGER,
+--     project_director TEXT,
+--     due_by INTEGER, 
+--     hear_by_date INTEGER,
+--     end_date INTEGER,
+--     date_applied INTEGER,
+--     date_expired INTEGER,
+--     number_of_reminders INTEGER,
+--     notes TEXT
+-- );
+
+-- CREATE TABLE parsed_notifications (
+-- 	id INTEGER PRIMARY KEY,
+-- 	grant_name TEXT NOT NULL,
+-- 	foundation_name TEXT NOT NULL,
+-- 	grant_status TEXT NOT NULL,	
+-- 	this_date INTEGER NOT NULL,
+-- 	final_date INTEGER NOT NULL,
+-- 	isReminder TEXT NOT NULL,
+-- 	reminder_type TEXT NOT NULL,
+--  job_id TEXT
+--  message_id INTEGER,
+-- );
+
+-- CREATE TABLE notifications (
+--     id INTEGER PRIMARY KEY,
+--     foundation_name TEXT NOT NULL,
+--     grant_name TEXT NOT NULL,
+--     notification_type TEXT NOT NULL,
+--     notification_deadline INTEGER NOT NULL,
+--     number_of_reminders INTEGER NOT NULL,
+--     first_reminder_date INTEGER NOT NULL
+-- );
+
+-- CREATE TABLE users (email TEXT NOT NULL);

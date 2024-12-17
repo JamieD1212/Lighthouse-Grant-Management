@@ -1,0 +1,979 @@
+/* Header: style.css
+Authors: Samuel Anaevune, Abigail Bernardeau, Jamie Duncan, Ingrid Mast and Andreas Matejka
+Created: 12/09/2024
+Description: This file holds the css code, dicating the styling of the Lighthouse Grant Management Application
+Copyright (c) <2024> <Samuel Anaevune, Abigail Bernardeau, Jamie Duncan, Ingrid Mast and Andreas Matejka>
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+/* Styling for the navigation bar */
+.navigation {
+   background-color: #EEECEC;
+   overflow: hidden;
+   height: 30px;
+   position: sticky;
+   top: 0;
+   z-index: 1;
+}
+
+/* Styling for the links in the navigation bar */
+.navigation a {
+   text-decoration: none;
+   color: #7F7F7F;
+   text-align: center;
+   padding: 22px 24px;
+   font-size: 22px;
+}
+
+/* Styling for the active tab on the navigation bar */
+.activeNavigation {
+   background-color: #7F7F7F;
+}
+
+/* Styling for the active links */
+.navigation a.activeNavigation {
+   color: white;
+}
+
+/* The code below outlines styling for the settings pop-up page */
+.settingsPopUpButton {
+   color: #7F7F7F;
+   text-align: center;
+   font-size: 22px;
+   border-width: 0px;
+   padding-right: 22px;
+   padding-left: 24px;
+   padding-bottom: 10px;
+}
+
+/* The (background) */
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  display: block;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  height: 400px;
+}
+
+.modal-content2 {
+  display: block;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  height: 80px;
+}
+
+#alertModalText {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #7F7F7F;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Styling for the foundation headers on the View all Grants Page*/
+.foundation-headers{
+   text-decoration: none;
+   color: white;
+   background-color: rgb(69, 67, 67);
+   text-align: left;
+   font-size: 15px;
+}
+
+/* Styling for the alphabet list on the View all Grants Page */
+.alphabetical{
+   height: 100%;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   width: 60px;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   right: 0;
+   background-color: rgb(225, 217, 217);
+}
+
+/* Styling for the alphabet list links on the View all Grants Page */
+.alphabetical a{
+   padding: 3px 8px 1px 8px;
+   text-decoration: none;
+   font-size: 15px;
+   color: black;
+   display: block;
+   transition: 0.3s;
+}
+
+/* Setting display of the letters to none originally */
+#A{
+   display: none;
+}
+#B{
+   display: none;
+}
+#C{
+   display: none;
+}
+#D{
+   display: none;
+}
+#E{
+   display: none;
+}
+#F{
+   display: none;
+}
+#G{
+   display: none;
+}
+#H{
+   display: none;
+}
+#I{
+   display: none;
+}
+#J{
+   display: none;
+}
+#K{
+   display: none;
+}
+#A{
+   display: none;
+}
+#L{
+   display: none;
+}
+#M{
+   display: none;
+}
+#N{
+   display: none;
+}
+#O{
+   display: none;
+}
+#P{
+   display: none;
+}
+#Q{
+   display: none;
+}
+#R{
+   display: none;
+}
+#S{
+   display: none;
+}
+#T{
+   display: none;
+}
+#U{
+   display: none;
+}
+#V{
+   display: none;
+}
+#W{
+   display: none;
+}
+#X{
+   display: none;
+}
+#Y{
+   display: none;
+}
+#Z{
+   display: none;
+}
+
+/* Styling for the active Grants on the View all Grants Page */
+.grid-active{
+   display: grid;
+   grid-template-columns: 300px 300px 300px;
+   background-color: rgb(134, 198, 134);
+   color: white;
+}
+
+/* Styling for the in concept Grants on the View all Grants Page */
+.grid-inconcept{
+   display: grid;
+   grid-template-columns: 300px 300px 300px 300px;
+   background-color: rgb(136, 176, 233);
+   color: white;
+}
+
+/* Styling for the pending Grants on the View all Grants Page */
+.grid-pending{
+   display: grid;
+   grid-template-columns: 300px 300px;
+   background-color: rgb(41, 41, 216);
+   color: white;
+}
+
+/* Styling for the expired Grants on the View all Grants Page */
+.grid-expired{
+   display: grid;
+   grid-template-columns: 300px 300px 300px;
+   background-color: rgb(199, 117, 117);
+   color: white;
+}
+
+/* Styling for the buttons on the View All Grants page */
+#exportButton {
+   position: fixed;
+   bottom: 0;
+   right: 60px;
+}
+
+#removeExpiredButton {
+   position: fixed;
+   bottom: 0px;
+   right: 180px;
+}
+
+/* Styling for the form labels */
+label {
+   font-size: 20px;
+}
+
+/* Styling for the drop-down select menu */
+select {
+   font-size: 18px;
+   padding: 4px 8px;
+   background-color: #EEECEC;
+   color: black;
+   border-width: 1px;
+   font-family: "Times New Roman", Times, serif;
+   cursor: pointer;
+}
+
+/* Styling for buttons */
+button {
+   font-size: 18px;
+   padding: 4px 8px;
+   background-color: #EEECEC;
+   color: black;
+   border-width: 1px;
+   cursor: pointer;
+   font-family: "Times New Roman", Times, serif;
+}
+
+/* Hiding elements on the addGrant page until a certain type of grant is selected */
+.notVisible{
+   display: none;
+   visibility: hidden;
+}
+
+/* ------CSS for Remove-Grant warning modal & Edit-Grant Submission modal------ */
+
+/* The Modal (background) */
+.wModal {
+   display: none;
+   position: fixed;
+   z-index: 5;
+   padding: 10%;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0, 0, 0);
+   background-color: rgba(0, 0, 0, 0.4);
+   animation-name: animatetop;
+   animation-duration: 0.4s
+}
+
+/* Modal Header */
+.wModal-header {
+   padding: 2px;
+   background-color: #5F8F8F;
+   color: white;
+   height: 15%;
+   width: 80%;
+   border: 1px solid #888;
+}
+
+/* Modal Content */
+.wModal-content {
+   position: fixed;
+   background-color: whitesmoke;
+   text-align: center;
+   margin: auto;
+   padding: 2px;
+   border: 1px solid #888;
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+   width: 80%;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+   from {top: -300px; opacity: 0}
+   to {top: 0; opacity: 1}
+}
+
+/* The 'Do not delete' Button (Delete-Warning Modal) */
+.noDel {
+   background-color: lightgray;
+   position: absolute;
+   right: 300px;
+   top: 25px;
+   font-size: 28px;
+   font-weight: bold;
+   width: 100px;
+   border-radius: 4px;
+}
+
+/* The 'Do delete' Button (Delete-Warning Modal) */
+.yesDel {
+   background-color: lightgrey;
+   position: absolute;
+   font-size: 28px;
+   left: 300px;
+   top: 25px;
+   font-weight: bold;
+   width: 100px;
+   border-radius: 4px;
+}
+
+#yesSub {
+   background-color: lightgrey;
+   position: absolute;
+   font-size: 28px;
+   left: 45%;
+   right: 45%;
+   top: 25px;
+   font-weight: bold;
+   width: 100px;
+   border-radius: 4px;
+}
+
+.mButton:hover,
+.mButton:focus {
+   color: white;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+#moreAttachLabel {
+    font-size: 18px;
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 6px 6px;
+    cursor: pointer;
+    color: black;
+    background-color:  #EEECEC;
+}
+
+#moreAttachButton {
+    display: none;
+}
+
+
+/* ------CSS for Grant View Layout.------ */
+
+/* General styling for the page. */
+#grant-view {
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 1.1em;
+   background-color: #85BB65;
+}
+
+#backBttn {
+   font-size: 1.3em;
+   width: 40px;
+   height: 40px;
+   border: 1px solid darkgreen;
+   background-color: #719F56;
+}
+
+#backBttn:hover {
+   color: white;
+}
+
+.flexRow {
+   display: flex;
+   gap: 5%;
+   justify-content: center;
+}
+
+#row3 {
+   justify-content: flex-start;
+   position: absolute;
+   top: 47%;
+   width: 90%;
+}
+
+.columnBox {
+   text-align: center;
+   width: 20%;
+   margin: 0 auto auto 5%;
+}
+
+#grant-status {
+   position: absolute;
+   left: 40%;
+}
+
+/* Positioning and size of 'Notes' label and text box. */
+#notes {
+   height: 240px;
+   /*   position: absolute;
+      top: 42%; left: 50.5%;*/
+   font-size: medium;
+
+   & .textBox {
+      height: 220px;
+   }
+}
+
+/*#misc {
+   position: absolute;
+   top: 10%; left: 36%;
+}*/
+
+/* Positioning and size of 'Notes' label and text box when editing. */
+#noteInput {
+   height: 240px;
+   position: absolute;
+   top: 11%; left: 31%;
+
+   & #no {
+      height: 150%;
+      width: 150%;
+      line-height: 150%;
+      font-family: "Times New Roman", Times, serif;
+      overflow: auto;
+   }
+}
+
+/* Formatting for the text boxes - static or input.*/
+.textBox {
+   background-color: white;
+   border: 1px solid black;
+   margin-bottom: 5%;
+   width: 100%;
+   overflow: auto;
+   min-height: 34px;
+   height: auto;
+   border-radius: 4px;
+}
+
+#submit {
+   position: absolute;
+   top: 50%; left: 81.9%;
+   font-size: 1.3em;
+   font-family: "Times New Roman", Times, serif;
+   width: 85px;
+   height: 50px;
+   color: black;
+   background-color:  #EEECEC;
+   border-radius: 4px;
+   border: none;
+   cursor: pointer;
+}
+
+#ViewRemButton {
+    color: black;
+    background-color:  #EEECEC;
+    border-radius: 4px;
+}
+
+#AttachButton {
+    color: black;
+    background-color:  #EEECEC;
+    border-radius: 4px;
+}
+
+#deleteBttn {
+    color: black;
+    background-color:  #EEECEC;
+    border-radius: 4px;
+}
+
+#editBttn {
+    color: black;
+    background-color:  #EEECEC;
+    border-radius: 4px;
+}
+
+#gt {
+    border-radius: 4px;
+}
+
+.grant {
+   color: #ffffff;
+}
+
+
+/* Background color for the different pages.*/
+.inConcept {
+   background-color: #59B4C1;
+}
+
+.pending {
+   background-color: #1155ccff;
+}
+
+.active {
+   background-color: green;
+}
+
+.expiredA {
+   background-color: #e0843d;
+}
+
+.expiredR {
+   background-color: #E0573D;
+}
+
+/* Styling for the foundation headers on the View all Grants Page*/
+.foundation-headers{
+   text-decoration: none;
+   color: white;
+   background-color: rgb(69, 67, 67);
+   text-align: left;
+   font-size: 15px;
+}
+
+/* Styling for the alphabet list on the View all Grants Page */
+.alphabetical{
+   height: 100%;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   width: 60px;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   right: 0;
+   background-color: rgb(225, 217, 217);
+}
+
+/* Styling for the alphabet list links on the View all Grants Page */
+.alphabetical a{
+   padding: 3px 8px 1px 8px;
+   text-decoration: none;
+   font-size: 15px;
+   color: black;
+   display: block;
+   transition: 0.3s;
+}
+
+
+/* The styling below outlines the layout of the Add Grant page */
+/* Container element that all other elements are positioned relative to */
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 50px;
+}
+
+.wrapper {
+  grid-column: 2 / -2;
+}
+
+.fullWidth {
+    width: 97%;
+}
+
+.smallerWidth {
+    width: 96%;
+}
+
+.reminderDateWidth {
+    width: 96.5%;
+}
+
+#addGrantHeader {
+   font-size: 20px;
+   text-align: center;
+}
+
+#grantName {
+   border-radius: 4px;
+}
+
+#grantIsDropDown {
+   border-radius: 4px;
+   height: 40px;
+   width: 97%;
+}
+
+#addGrantFoundation {
+   border-radius: 4px;
+}
+
+#addGrantDirector {
+   border-radius: 4px;
+}
+
+#addGrantRequest {
+   border-radius: 4px;
+}
+
+#addGrantExpected {
+   border-radius: 4px;
+}
+
+#addGrantAwarded {
+   border-radius: 4px;
+}
+
+#grantAwardedDropDown {
+   border-radius: 4px;
+}
+
+#beforeInput {
+   border-radius: 4px;
+   border-width: 1px;
+}
+
+#activeInput {
+   border-radius: 4px;
+   border-width: 1px;
+}
+
+#expiredInput {
+   border-radius: 4px;
+   border-width: 1px;
+}
+
+#reminderNumber {
+   font-size: 18px;
+}
+
+#reminderDropDown {
+   border-radius: 4px;
+   border-width: 1px;
+   height: 30px;
+}
+
+#addReminderButton {
+   background-color: #4CC59B;
+   border-radius: 4px;
+   border-color: #4CC59B;
+}
+
+#subtractReminderButton {
+   background-color: #4CC59B;
+   border-radius: 4px;
+   border-color: #4CC59B;
+}
+
+#attachmentsLabel {
+   font-size: 18px;
+}
+
+#submitButton {
+   background-color: #4CC59B;
+   border-radius: 4px;
+   border-color: #4CC59B;
+}
+
+/* Styling for the calendar page */
+
+.fc-event-title {
+   white-space: nowrap;
+   overflow: hidden;
+   /* text-overflow: ellipsis; */
+}
+
+.fc-event:hover .fc-event-title {
+   white-space: normal;
+   overflow: visible;
+   text-overflow: unset;
+}
+.fc-basic-view .fc-body .fc-row {
+   min-height: 1em;
+}
+
+/* This would just permanently show the entire reminder */
+/* .fc-event-title {
+   white-space: normal;
+   overflow: visible;
+ } */
+
+.monthview{
+   width: 95%;
+   transition: 0.3 ease;
+}
+.slide{
+   height: 100%;
+   width: 20%;
+   position: absolute;
+   right: 0px;
+   background-color: #fff;
+   transition: 0.5s ease;
+   transform: translateX(-20%);
+   opacity: 0;
+}
+#inSlideh{
+   font-weight: 800;
+   font-size: x-large;
+   text-align: left;
+   padding: 10px 0;
+   padding-top: 7px;
+   padding-left: 20px;
+   pointer-events: none;
+}
+#inSlidep{
+   padding-left: 15px;
+}
+#nextSevenCheckBox{
+   display: none;
+   visibility: hidden;
+   -webkit-appearance: none;
+}
+.toggle{
+   position: absolute;
+   height: 30px;
+   width: 30px;
+   top: 60px;
+   right: 15px;
+   z-index: 1;
+   cursor: pointer;
+   border-radius: 2px;
+   background-color: #fff;
+   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.toggle .common{
+   position: absolute;
+   height: 2px;
+   width: 20px;
+   background-color: #7F7F7F;
+   border-radius: 50px;
+   transition: 0.3s ease;
+}
+.toggle .top_line{
+   top: 30%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+.toggle .middle_line{
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+.toggle .bottom_line{
+   top: 70%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+input:checked ~ .toggle .top_line{
+   left: 2px;
+   top: 14px;
+   width: 25px;
+   transform: rotate(45deg);
+}
+input:checked ~ .toggle .bottom_line{
+   left: 2px;
+   top: 14px;
+   width: 25px;
+   transform: rotate(-45deg);
+}
+input:checked ~ .toggle .middle_line{
+   opacity: 0;
+   transform: translateX(20px);
+}
+input:checked ~ .slide{
+   transform: translateX(0);
+   box-shadow: 0 0 15px rgba(0,0,0,0.5);
+   opacity: 1;
+}
+input:checked ~ .monthview{
+   width: 78%;
+}
+#toggleArea {
+   height: 30px;
+   width: 30px;
+   position: absolute;
+   right: 15px;
+   top: 60px;
+   cursor: pointer;
+}
+
+/* View Reminder Pop Up */
+.ViewRemPopUp {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(0);
+   transition: 200ms ease-in-out;
+   border: 1px solid black;
+   border-radius: 10px;
+   z-index: 10;
+   background-color: white;
+   width: 500px;
+   max-width: 80%;
+   z-index: 102;
+ }
+
+ .ViewRemPopUp.active {
+   transform: translate(-50%, -50%) scale(1);
+ }
+
+ .ViewRemPopUp-header {
+   padding: 10px 15px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 1px solid black;
+ }
+
+ .ViewRemPopUp-header .title {
+   font-size: 1.25rem;
+   font-weight: bold;
+ }
+
+ .ViewRemPopUp-header .close-button {
+   cursor: pointer;
+   border: none;
+   outline: none;
+   background: none;
+   font-size: 1.25rem;
+   font-weight: bold;
+ }
+
+ .ViewRemPopUp-body {
+   padding: 10px 15px;
+   z-index: 3;
+ }
+
+/* Edit Reminder Pop Up */
+.EditRemPopUp {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(0);
+   transition: 200ms ease-in-out;
+   border: 1px solid black;
+   border-radius: 10px;
+   z-index: 10;
+   background-color: white;
+   width: 500px;
+   max-width: 80%;
+ }
+
+ .EditRemPopUp.active {
+   transform: translate(-50%, -50%) scale(1);
+ }
+
+ .EditRemPopUp-header {
+   padding: 10px 15px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 1px solid black;
+ }
+
+ .EditRemPopUp-header .title {
+   font-size: 1.25rem;
+   font-weight: bold;
+ }
+
+ .EditRemPopUp-header .close-button {
+   cursor: pointer;
+   border: none;
+   outline: none;
+   background: none;
+   font-size: 1.25rem;
+   font-weight: bold;
+ }
+
+ .EditRemPopUp-body {
+   padding: 10px 15px;
+ }
+
+.deleteNotification {
+   background: transparent;
+   border: none;
+   color: black;
+   font-size: 18px;
+   cursor: pointer;
+   position: absolute;
+   right: 20px;
+   padding: 0;
+   width: auto;
+   height: auto;
+ }
+
+ .deleteNotification:focus {
+   outline: none;
+ }
+
+ .deleteNotification:hover {
+   color: red;
+ }
+
+ #overlay {
+   position: fixed;
+   opacity: 0;
+   transition: 100ms ease-in-out;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, .5);
+   pointer-events: none;
+   z-index: 100;
+ }
+
+ #overlay.active {
+   opacity: 1;
+   pointer-events: all;
+ }
+
+ /* The code below outlines styling for the add new reminder section of single grant view */
+
+ .reminderButtons {
+     background-color: #7F7F7F;
+     color: white;
+     border-radius: 4px;
+ }
+
+ #addReminderArea {
+     display: block;
+     background-color: pink;
+ }
+
+ #addReminderWrapper {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     background-color: white;
+ }

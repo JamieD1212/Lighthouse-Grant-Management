@@ -1,0 +1,209 @@
+<!-- Header: addGrant.html
+Authors: Samuel Anaevune, Abigail Bernardeau, Jamie Duncan, Ingrid Mast and Andreas Matejka
+Created: 12/09/2024
+Description: This file holds the html code for the Add Grant page of the Lighthouse Grant Management Application
+Copyright (c) <2024> <Samuel Anaevune, Abigail Bernardeau, Jamie Duncan, Ingrid Mast and Andreas Matejka>
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<!--- Here is the site's title --->
+<title>Lighthouse Grant Management</title>
+
+<link rel="stylesheet" href="style.css">
+<script defer src="addGrantRender.js"></script>
+</head>
+
+<body>
+
+<div class="navigation">
+<a href="calendar.html">Grant Calendar</a>
+<a href="viewAll.html">View All Grants</a>
+<a class="activeNavigation" href="addGrant.html">Add Grant</a>
+<button id="popUpButton" class="settingsPopUpButton">Email Settings</button>
+</div>
+
+<!-- Content for our settings page pop-up -->
+<div id="popUpModal" class="modal notVisible">
+<div class="modal-content">
+<span class="close">&times;</span>
+
+<p><b>Reminders sent from: lighthouse@hamilton.edu</b></p>
+<p>To recieve reminder emails, forward emails from lighthouse@hamilton.edu to your desired address.</p>
+<br>
+<p><b>Forwarding Instructions</b></p>
+<ol>
+    <li>In gmail, login to lighthouse@hamilton.edu</li>
+    <li>On the top right corner of the page select settings, then click <b>See all settings</b></li>
+    <li>Click the <b>Forwarding and POP/IMAP</b> or <b>Forwarding</b> tab</li>
+    <li>In this section click "add a forwarding address", enter the address you want to forward emails to</li>
+    <li>Click <b>Next</b>, then <b>Proceed</b>, then <b>Okay</b></li>
+    <li>In the email account you want to send emails to, click the verification link</li>
+    <li>Return to the "Settings" page in the lighthouse@hamilton.edu account</li>
+    <li>Refresh your browser and again click the <b>Forwarding and POP/IMAP</b> or <b>Forwarding</b> tab</li>
+    <li>Select the radio button that says "forward a copy of incoming mail to" followed by the email you wish to forward to</li>
+    <li>Scroll to the bottom of the page and click <b>Save Changes</b></li>
+
+</div>
+</div>
+
+<div id="alertModal" class="modal notVisible">
+<div class="modal-content2">
+<span class="close">&times;</span>
+
+<p id="alertModalText">This is our alert modal</p>
+
+</div>
+</div>
+
+<!-- <div class="wholePage"> -->
+<div class="grid">
+<div class="wrapper">
+<p id="addGrantHeader"><b>Enter The Grant's Information Below (* Indicates Required Field)</b></p>
+
+<!-- Creating a form for the grant name -->
+<form id="grantName">
+    <label>Grant Name: *</label>
+    <input type="text" id="grantNameInput" class="smallerWidth">
+</form>
+
+<br>
+
+<div id="firstDropDown">
+<!-- Creating a drop down box based on the type of grant -->
+<!-- This drop down menu is passed the JavaScript function toggleQuestions which runs each time the drop down answer is changed -->
+<select id="grantIsDropDown" onChange="grantTypeChange(this)">
+    <!-- A label for the drop down box that cannot be selected -->
+    <option selected disabled>This Grant Is *</option>
+    <option value="inConcept">In Concept</option>
+    <option value="pending">Pending</option>
+    <option value="active">Active</option>
+    <option value="expired">Expired</option>
+</select>
+</div>
+
+<br>
+
+<!-- Creating a form for the foundation/source -->
+<form id="addGrantFoundation">
+    <label>Foundation/Source: *</label>
+    <input type="text" id="addGrantFoundationInput" class="smallerWidth">
+</form>
+<br>
+<div id="grantAwarded?">
+<!-- Creating a drop down box for whether or not the grant was awarded -->
+<select id="grantAwardedDropDown" class="notVisible" onChange="toggleAwarded(this)" class="fullWidth">
+    <!-- A label for the drown down box that cannot be selected -->
+    <option selected disabled value="grantAwarded">Grant Awarded?</option>
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+</select>
+</div>
+
+<!-- Creating a form for the project director -->
+<form id="addGrantDirector">
+    <label id="directorLabel" class="notVisible">Project Director:</label>
+    <input id="directorInput" class="notVisible smallerWidth" type="text">
+</form>
+
+<!-- Creating a form for the requested amount -->
+<form id="addGrantRequest">
+    <label id="requestAmountLabel" class="notVisible">Requested Amount:</label>
+    <input id="requestAmountInput" class="notVisible smallerWidth" type="text">
+</form>
+
+<!-- Creating a form for the expected amount -->
+<form id="addGrantExpected">
+    <label id="expectedLabel" class="notVisible">Expected Amount:</label>
+    <input id="expectedInput" class="notVisible smallerWidth" type="text" class="fullWidth">
+</form>
+
+<!-- Creating a form for the amount awarded -->
+<form id="addGrantAwarded">
+    <label id="awardedAmountLabel" class="notVisible">Amount Awarded:</label>
+    <input id="awardedAmountInput" class="notVisible smallerWidth" type="text">
+</form>
+
+<!-- Creating a form for the date with various labels based on the grant type -->
+<form>
+    <label id="dueByLabel" class="notVisible">Due By:</label>
+    <label id="hearByLabel" class="notVisible">Hear By:</label>
+    <input id="beforeInput" class="notVisible fullWidth" type="date">
+    <label id="endDateLabel" class="notVisible">End Date:</label>
+    <input id="activeInput" class="notVisible fullWidth" type="date">
+    <label id="expiredDateLabel" class="notVisible">Date Expired:</label>
+    <label id="appliedDateLabel" class="notVisible">Date Applied:</label>
+    <input id="expiredInput" class="notVisible fullWidth" type="date">
+</form>
+<div>
+<br>
+
+<!-- The following items are for the reminder system -->
+<div id="reminderSection">
+<label id="reminderLabel" class="notVisible"><b>Grant Reminders</b></label>
+
+<br>
+
+<p id="reminderNumber" class="notVisible">Reminder #1:</p>
+
+<div class="firstQuestionSection">
+<!-- Drop down box for reminder type -->
+<select id="reminderDropDown" class="notVisible fullWidth" onChange="addFirstReminderAsterisks()">
+    <!-- A label for the drown down box that cannot be selected -->
+    <option id="disabledSelection" selected disabled>Notification Type</option>
+    <option value="noteReportDue">Report Due</option>
+    <option value="noteExpires">Expires</option>
+    <option value="noteLookAt">Look At</option>
+    <option value="noteApplicationDue">Application Due</option>
+    <option value="noteHearBy">Hear By</option>
+</select>
+
+<!-- Creating a form for the reminder date -->
+<form>
+    <label id="deadlineLabel" class="notVisible">Deadline:</label>
+    <input id="deadlineInput" class="notVisible reminderDateWidth" type="date" onChange="addFirstReminderAsterisks()">
+</form>
+
+<!-- Creating a form for the number of reminders -->
+<form id="reminderNumberForm lessLongInput">
+    <label id="reminderNumberLabel" class="notVisible">Number of Reminders:</label>
+    <input id="reminderNumberInput" class="notVisible smallerWidth" type="number" onChange="addFirstReminderAsterisks()">
+</form>
+
+<!-- Creating a form for the first reminder date -->
+<form id="firstForm dateLengthInput">
+    <label id="firstLabel" class="notVisible">First Reminder On:</label>
+    <input id="firstInput" class="notVisible reminderDateWidth" type="date" onChange="addFirstReminderAsterisks()">
+</form>
+</div>
+</div>
+<br>
+<button id="subtractReminderButton" onclick="subReminder()" class="notVisible fullWidth" type="button">Remove Reminder</button>
+<br>
+<br>
+<button id="addReminderButton" onclick="addReminder()" class="notVisible fullWidth" type="button">Add a New Reminder</button>
+
+<br>
+<br>
+
+<!-- Creating a form for the notes section -->
+<label id="notesLabel" class="notVisible">Notes:</label>
+<textarea id="notesInput" class="notVisible smallerWidth" type="text" rows="15"></textarea>
+
+<br>
+<br>
+<p id="attachmentsLabel" class="notVisible">Add Attachments: </p>
+<input type="file" id="attachmentButton" class="notVisible" multiple>
+<br>
+<br>
+<button id="submitButton" class="notVisible fullWidth" type="button" onClick="checkSubmission()">Submit</button>
+</div>
+</body>
+</html>

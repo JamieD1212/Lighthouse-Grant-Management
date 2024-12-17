@@ -1,0 +1,280 @@
+<!-- Header: viewAll.html
+Authors: Samuel Anaevune, Abigail Bernardeau, Jamie Duncan, Ingrid Mast and Andreas Matejka
+Created: 12/09/2024
+Description: This file holds the html code for the View All Grants page of the Lighthouse Grant Management Application
+Copyright (c) <2024> <Samuel Anaevune, Abigail Bernardeau, Jamie Duncan, Ingrid Mast and Andreas Matejka>
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<!--- Here is the site's title --->
+<title>Lighthouse Grant Management</title>
+
+<link rel="stylesheet" href="style.css">
+<script defer src="render.js"></script>
+</head>
+
+<body>
+
+<div class="navigation">
+<a href="calendar.html">Grant Calendar</a>
+<a class="activeNavigation" href="viewAll.html" id="viewAllActiveLink">View All Grants</a>
+<a href="addGrant.html">Add Grant</a>
+<button id="popUpButton" class="settingsPopUpButton">Email Settings</button>
+</div>
+
+<!-- Content for our settings page pop-up -->
+<div id="popUpModal" class="modal notVisible">
+<div class="modal-content">
+<span class="close">&times;</span>
+
+<p><b>Reminders sent from: lighthouse@hamilton.edu</b></p>
+<p>To recieve reminder emails, forward emails from lighthouse@hamilton.edu to your desired address.</p>
+<br>
+<p><b>Forwarding Instructions</b></p>
+<ol>
+    <li>In gmail, login to lighthouse@hamilton.edu</li>
+    <li>On the top right corner of the page select settings, then click <b>See all settings</b></li>
+    <li>Click the <b>Forwarding and POP/IMAP</b> or <b>Forwarding</b> tab</li>
+    <li>In this section click "add a forwarding address", enter the address you want to forward emails to</li>
+    <li>Click <b>Next</b>, then <b>Proceed</b>, then <b>Okay</b></li>
+    <li>In the email account you want to send emails to, click the verification link</li>
+    <li>Return to the "Settings" page in the lighthouse@hamilton.edu account</li>
+    <li>Refresh your browser and again click the <b>Forwarding and POP/IMAP</b> or <b>Forwarding</b> tab</li>
+    <li>Select the radio button that says "forward a copy of incoming mail to" followed by the email you wish to forward to</li>
+    <li>Scroll to the bottom of the page and click <b>Save Changes</b></li>
+
+</div>
+</div>
+
+<div id="alertModal2" class="modal notVisible">
+<div class="modal-content2">
+<span class="close">&times;</span>
+
+<p id="alertModalText2">This is our alert modal</p>
+
+</div>
+</div>
+
+<div id="main-page">  <h1 id = "A" class = "foundation-headers">A</h1>
+    <div id = 'aButtons'>
+<!--        <button id='AAA' class="grant active">Grant Name: AAA</button>-->
+    </div>
+    <h1 id = "B" class = "foundation-headers">B</h1>
+    <div id = 'bButtons'></div>
+    <h1 id = "C" class = "foundation-headers">C</h1>
+    <div id = 'cButtons'></div>
+    <h1 id = "D" class = "foundation-headers">D</h1>
+    <div id = 'dButtons'></div>
+    <h1 id = "E" class = "foundation-headers">E</h1>
+    <div id = 'eButtons'></div>
+    <h1 id = "F" class = "foundation-headers">F</h1>
+    <div id = 'fButtons'></div>
+    <h1 id = "G" class = "foundation-headers">G</h1>
+    <div id = 'gButtons'></div>
+    <h1 id = "H" class = "foundation-headers">H</h1>
+    <div id = 'hButtons'></div>
+    <h1 id = "I" class = "foundation-headers">I</h1>
+    <div id = 'iButtons'></div>
+    <h1 id = "J" class = "foundation-headers">J</h1>
+    <div id = 'jButtons'></div>
+    <h1 id = "K" class = "foundation-headers">K</h1>
+    <div id = kButtons></div>
+    <h1 id = "L" class = "foundation-headers">L</h1>
+    <div id = 'lButtons'></div>
+    <h1 id = "M" class = "foundation-headers">M</h1>
+    <div id = 'mButtons'></div>
+    <h1 id = "N" class = "foundation-headers">N</h1>
+    <div id = 'nButtons'></div>
+    <h1 id = "O" class = "foundation-headers">O</h1>
+    <div id = 'oButtons'></div>
+    <h1 id = "P" class = "foundation-headers">P</h1>
+    <div id = "pButtons"></div>
+    <h1 id = "Q" class = "foundation-headers">Q</h1>
+    <div id = 'qButtons'></div>
+    <h1 id = "R" class = "foundation-headers">R</h1>
+    <div id = 'rButtons'></div>
+    <h1 id = "S" class = "foundation-headers">S</h1>
+    <div id = 'sButtons'></div>
+    <h1 id = "T" class = "foundation-headers">T</h1>
+    <div id = 'tButtons'></div>
+    <h1 id = "U" class = "foundation-headers">U</h1>
+    <div id = "uButtons"></div>
+    <h1 id = "V" class = "foundation-headers">V</h1>
+    <div id = 'vButtons'></div>
+    <h1 id = "W" class = "foundation-headers">W</h1>
+    <div id = 'wButtons'></div>
+    <h1 id = "X" class = "foundation-headers">X</h1>
+    <div id = 'xButtons'></div>
+    <h1 id = "Y" class = "foundation-headers">Y</h1>
+    <div id = 'yButtons'></div>
+    <h1 id = "Z" class = "foundation-headers">Z</h1>
+    <div id = 'zButtons'></div>
+
+    <ul class = "alphabetical">
+        <li><a href="#A">A</a></li>
+        <li><a href="#B">B</a></li>
+        <li><a href="#C">C</a></li>
+        <li><a href="#D">D</a></li>
+        <li><a href="#E">E</a></li>
+        <li><a href="#F">F</a></li>
+        <li><a href="#G">G</a></li>
+        <li><a href="#H">H</a></li>
+        <li><a href="#I">I</a></li>
+        <li><a href="#J">J</a></li>
+        <li><a href="#K">K</a></li>
+        <li><a href="#L">L</a></li>
+        <li><a href="#M">M</a></li>
+        <li><a href="#N">N</a></li>
+        <li><a href="#O">O</a></li>
+        <li><a href="#P">P</a></li>
+        <li><a href="#Q">Q</a></li>
+        <li><a href="#R">R</a></li>
+        <li><a href="#S">S</a></li>
+        <li><a href="#T">T</a></li>
+        <li><a href="#U">U</a></li>
+        <li><a href="#V">V</a></li>
+        <li><a href="#W">W</a></li>
+        <li><a href="#X">X</a></li>
+        <li><a href="#Y">Y</a></li>
+        <li><a href="#Z">Z</a></li>
+    </ul>
+    <button id="exportButton" type="button">Export to CSV</button>
+    <button id="removeExpiredButton" type="button" onclick="toggleExpiredButton()">Include Expired Grants</button>
+</div>
+
+    <div id="grant-view" class="notVisible">
+    <button id="backBttn"><</button>
+
+    <form id="edit" class="notVisible">
+        <div id="input1" class="columnBox">
+            <label for="fn">Foundation Name</label> <input id="fn" name="foundation_name" class="textBox">
+        </div>
+        <div id="input2" class="columnBox">
+            <label for="gn">Grant Name</label> <input id="gn" name="grant_name" class="textBox">
+        </div>
+        <div id="input3" class="columnBox">
+            <label for="ed">End Date</label> <input id="ed" name="end_date" class="textBox">
+        </div>
+        <div id="input4" class="columnBox">
+            <label for="pd">Project Director</label> <input id="pd" name="project_director" class="textBox">
+        </div>
+        <div id="input5" class="columnBox">
+            <label for="ra">Amount Requested</label> <input id="ra" name="requested_amount" class="textBox">
+        </div>
+        <div id="input6" class="columnBox">
+            <label for="ea">Amount Expected</label> <input id="ea" name="expected_amount" class="textBox">
+        </div>
+        <div id="noteInput" class="columnBox">
+            <label for="no">Notes</label> <textarea id="no" name="notes" class="textBox"></textarea>
+        </div>
+
+        <input id="submit" type="submit">
+    </form>
+
+    <div id="row1" class="flexRow default">
+        <div id="box1" class="columnBox default">
+            <label>Foundation Name</label> <div id="t1" class="textBox"></div>
+        </div>
+        <div id="box2" class="columnBox default">
+            <label>Grant Name</label><div id="t2" class="textBox"></div>
+        </div>
+        <div id="box3" class="columnBox default">
+            <label>End Date</label><div id="t3" class="textBox"></div>
+        </div>
+    </div>
+
+
+    <div id="row2" class="flexRow default">
+        <div id="box4" class="columnBox default">
+            <label>Project Director</label><div id="t4" class="textBox"></div>
+        </div>
+        <div id="box5" class="columnBox default">
+            <label>Amount Requested</label><div id="t5" class="textBox"></div>
+        </div>
+        <div id="box6" class="columnBox default">
+            <label>Amount Expected</label><div id="t6" class="textBox"></div>
+        </div>
+    </div>
+
+
+    <div id="row3" class="flexRow default">
+        <div id="misc" class="columnBox">
+            <div id="grantTypeInput" class="notVisible">
+                <label class="columnBox" for="gt">This Grant is:</label>
+                <select id="gt" onChange="grantTypeChange(this)">
+                    <option value="inConcept">In Concept</option>
+                    <option value="pending">Pending</option>
+                    <option value="active">Active</option>
+                    <option value="expiredA">Expired (Awarded)</option>
+                    <option value="expiredR">Expired (Rejected)</option>
+                </select>
+            </div>
+            <button pop-up-button="#view" id="ViewRemButton" class="default" onclick="viewReminder()">View Reminders</button>
+            <div class="ViewRemPopUp" id="ViewRemPopUp">
+                <div class="ViewRemPopUp-header">
+                    <div class="title" id="viewRemPopUpTitle">All Reminders</div>
+                    <button data-close-button id="ViewRemClose" class="close-button">&times;</button>
+                </div>
+                <div id="ViewRemBody" class="ViewRemPopUp-body"></div>
+            </div>
+
+            <div id="overlay"></div>
+            <button id="AttachButton" class="default" onclick="openFolder()">View Attachments</button>
+            <div id="attachSection">
+            </div>
+            <div>
+                <label id="moreAttachLabel" class="notVisible" for="moreAttachButton">Add Attachments</label>
+                <input type="file" id="moreAttachButton" class="notVisible" multiple>
+            </div>
+            <button id="deleteBttn" class="default">Delete Grant</button>
+
+            <div id="deleteGrantModal" class="wModal">
+                <div class="wModal-header">
+                    <h2>Are You Sure You Want To Delete This Grant?</h2>
+                </div>
+                <div class="wModal-content">
+                    <p></p>
+                    <br>
+                    <br>
+                    <br>
+                    <span class="yesDel mButton">Yes</span>
+                    <span class="noDel mButton">No</span>
+                </div>
+            </div>
+
+            <div id="submitEditModal" class="wModal">
+                <div class="wModal-header">
+                    <h2>Changes Submitted!</h2>
+                </div>
+                <div class="wModal-content">
+                    <p></p>
+                    <br>
+                    <br>
+                    <br>
+                    <span id="yesSub" class="mButton">OK</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="grant-status" class="columnBox">
+            <p>This Grant is:</p>
+            <p id="type">---</p>
+            <button id="editBttn" class="default">Edit</button>
+        </div>
+        <div id="notes" class="columnBox default">
+            <label>Notes</label><div id="tn" class="textBox"></div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

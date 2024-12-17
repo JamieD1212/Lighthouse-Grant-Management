@@ -1,0 +1,74 @@
+<!-- Header: calendar.html
+Authors: Samuel Anaevune, Abigail Bernardeau, Jamie Duncan, Ingrid Mast and Andreas Matejka
+Created: 12/09/2024
+Description: This file holds the html code for the Calendar page of the Lighthouse Grant Management Application
+Copyright (c) <2024> <Samuel Anaevune, Abigail Bernardeau, Jamie Duncan, Ingrid Mast and Andreas Matejka>
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<!--- Here is the site's title --->
+<title>Lighthouse Grant Management</title>
+
+<link rel="stylesheet" href="style.css">
+<script defer src="calendarRender.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+
+</head>
+<body>
+<div class="navigation">
+<a class="activeNavigation" href="calendar.html">Grant Calendar</a>
+<a href="viewAll.html">View All Grants</a>
+<a href="addGrant.html">Add Grant</a>
+<button id="popUpButton" class="settingsPopUpButton">Email Settings</button>
+</div>
+
+<!-- Content for our settings page pop-up -->
+<div id="popUpModal" class="modal notVisible">
+<div class="modal-content">
+<span class="close">&times;</span>
+<div class="settingsTopGridContainer" id="settingsInfo">
+
+<p><b>Reminders sent from: lighthouse@hamilton.edu</b></p>
+<p>To recieve reminder emails, forward emails from lighthouse@hamilton.edu to your desired address.</p>
+<br>
+<p><b>Forwarding Instructions</b></p>
+<ol>
+    <li>In gmail, login to lighthouse@hamilton.edu</li>
+    <li>On the top right corner of the page select settings, then click <b>See all settings</b></li>
+    <li>Click the <b>Forwarding and POP/IMAP</b> or <b>Forwarding</b> tab</li>
+    <li>In this section click "add a forwarding address", enter the address you want to forward emails to</li>
+    <li>Click <b>Next</b>, then <b>Proceed</b>, then <b>Okay</b></li>
+    <li>In the email account you want to send emails to, click the verification link</li>
+    <li>Return to the "Settings" page in the lighthouse@hamilton.edu account</li>
+    <li>Refresh your browser and again click the <b>Forwarding and POP/IMAP</b> or <b>Forwarding</b> tab</li>
+    <li>Select the radio button that says "forward a copy of incoming mail to" followed by the email you wish to forward to</li>
+    <li>Scroll to the bottom of the page and click <b>Save Changes</b></li>
+</div>
+</div>
+</div>
+
+<label>
+    <input type="checkbox" id="nextSevenCheckBox">
+    <div class="toggle" id="toggleArea">
+        <span class="top_line common"></span>
+        <span class="middle_line common"></span>
+        <span class="bottom_line common"></span>
+    </div>
+    <div class="slide">
+        <h2 id="inSlideh">Next Seven Days</h2>
+        <div id="inSlidep"></div>
+
+    </div>
+    <p> </p>
+<div class="monthview"> <dic id='calendar'></dic> </div>
+</label>
+</body>
+</html>
