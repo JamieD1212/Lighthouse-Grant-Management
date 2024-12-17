@@ -1,0 +1,3 @@
+This is the exported grants folder. Here is where the CSV file you requested from the application is stored.
+To find the file you exported, select the file labelled with the current date.
+All CSV files will remain in this file, stored on your computer, unless you manually delete them.
